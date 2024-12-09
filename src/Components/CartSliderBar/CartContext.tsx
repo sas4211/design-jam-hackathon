@@ -1,24 +1,37 @@
-"use client"
+"use client";
+
 // context/CartContext.tsx
 import { createContext, useContext, useState, ReactNode } from "react";
 
-type CartContextType = {
-  isCartOpen: boolean;
-  cartItems: Array<any>;
-  openCart: () => void;
-  closeCart: () => void;
-  addToCart: (item: any) => void;
+// Define the shape of a CartItem
+type CartItem = {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string; // URL or path to the product image
 };
 
+// Define the context type
+type CartContextType = {
+  isCartOpen: boolean;
+  cartItems: CartItem[];
+  openCart: () => void;
+  closeCart: () => void;
+  addToCart: (item: CartItem) => void;
+};
+
+// Create the context with a default value of `undefined`
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState<any[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   const openCart = () => setIsCartOpen(true);
   const closeCart = () => setIsCartOpen(false);
-  const addToCart = (item: any) => setCartItems((prev) => [...prev, item]);
+  const addToCart = (item: CartItem) =>
+    setCartItems((prev) => [...prev, item]);
 
   return (
     <CartContext.Provider
@@ -29,8 +42,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
   );
 }
 
+// Custom hook to use the CartContext
 export function useCart() {
   const context = useContext(CartContext);
-  if (!context) throw new Error("useCart must be used within a CartProvider");
+  if (!context) {
+    throw new Error("useCart must be used within a CartProvider");
+  }
   return context;
 }

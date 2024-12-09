@@ -40,7 +40,7 @@ export default function ProductDetails() {
         {activeTab === "description" && (
           <div className="mx-auto max-w-4xl">
             <p className="text-sm text-gray-600 mb-6">
-              Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn
+              Embodying the raw, wayward spirit of rock &apos;n&apos; roll, the Kilburn
               portable active stereo speaker takes the unmistakable look and
               sound of Marshall, unplugs the chords, and takes the show on the
               road.
