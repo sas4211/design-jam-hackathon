@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/Components/Home/Header"
+
 import { Home } from "lucide-react";
+
 
 
 const geistSans = localFont({
@@ -33,6 +34,7 @@ export default function RootLayout({
       ><main>
       
         <Home />
+        
         {children}
         </main>
       </body>

@@ -7,67 +7,105 @@ const ProductGrid = () => {
       id: 1,
       name: "Trenton modular sofa, 3",
       price: "Rs. 25,000.00",
-      image: "/path-to-image1.jpg",
+      image: "/Trenton modular sofa_3.png",
     },
     {
       id: 2,
       name: "Granite dining table with dining chair",
       price: "Rs. 25,000.00",
-      image: "/path-to-image2.jpg",
+      image: "/Granite dining table with dining chair 1.png",
     },
     {
       id: 3,
       name: "Outdoor bar table and stool",
       price: "Rs. 25,000.00",
-      image: "/path-to-image3.jpg",
+      image: "/Outdoor bar table and stool 1.png",
     },
     {
       id: 4,
       name: "Plain console with teak mirror",
       price: "Rs. 25,000.00",
-      image: "/path-to-image4.jpg",
+      image: "/Plain console with teak mirror 1.png",
     },
     {
-      id: 5,
-      name: "Crown coffee table",
-      price: "Rs. 250,000.00",
-      image: "/path-to-image5.jpg",
-    },
-    {
-      id: 6,
-      name: "Nova coffee table",
-      price: "Rs. 225,000.00",
-      image: "/path-to-image6.jpg",
-    },
+        id:5,
+        name: "Grain coffee table ",
+        price: "Rs 15,000.00",
+        image: "/Grain coffee table 1.png",
+        },
+        {
+            id: 6,
+            name: "Kent coffe table",
+            price: "Rs. 250,000.00",
+            image: "/Kent coffee table 1.png",
+            },
+       
     {
       id: 7,
-      name: "Storage bench oak coffee",
-      price: "Rs. 215,000.00",
-      image: "/path-to-image7.jpg",
-    },
-    {
-      id: 8,
-      name: "Petra console",
+      name: "Round coffee table_Color 2",
       price: "Rs. 250,000.00",
-      image: "/path-to-image8.jpg",
+      image: "/Round coffee table_color 2.png",
     },
     {
-      id: 9,
-      name: "Bench with teakwood",
-      price: "Rs. 20,000.00",
-      image: "/path-to-image9.jpg",
+        id: 8,
+        name: "Reclaimed teak coffee table  ",
+        price: "Rs 25,200.00",
+        image: "/Reclaimed teak coffee table 1.png",
+        },
+        {
+            id: 9,
+            name: "Reclaimed teak sideboard ",
+            price: "Rs 20,000.00",
+            image: "/Reclaimed teak Sideboard 1.png",
+            },
+      {
+        id: 10,
+        name: "Plain console_1 ",
+        price: "Rs 258,200.00",
+        image: "/Plain console_ 1.png",
+        },
+        {
+            id: 11,
+            name: "SJP_0825 ",
+            price: "Rs 20,000.00",
+            image: "/SJP_0825.png",
+            },
+            {
+                id: 12,
+                name: "Bella chair and table 1 ",
+                price: "Rs 100,000.00",
+                image: "/Bella chair and table 1.png",
+                }, 
+                {
+                    id: 13 ,
+                    name: "Granite square side table ",
+                    price: "Rs 258,800.00",
+                    image: "/Granite square side table1.png",
+                    },
+      
+    {
+      id: 14,
+      name: "Asgaard sofa 1 ",
+      price: "Rs. 25,000.00",
+      image: "/Asgaard sofa 1.png",
     },
     {
-      id: 10,
-      name: "Mogogo modular sofa",
-      price: "Rs. 118,000.00",
-      image: "/path-to-image10.jpg",
+      id: 15,
+      name: "Maya sofa three seater",
+      price: "Rs. 215,000.00",
+      image: "/Maya sofa three seater 1.png",
+    },
+    {
+      id: 16,
+      name: "Outdoor sofa set",
+      price: "Rs. 250,000.00",
+      image: "/Outdoor sofa set 1.png",
     },
   ];
 
   return (
     <div className="bg-white py-12 px-6 lg:px-24">
-      <h1 className="text-3xl font-bold text-center mb-8">Product Grid</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">Products</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
           <div
@@ -76,7 +114,7 @@ const ProductGrid = () => {
           >
             {/* Product Image */}
             <Image
-              src={product.image}
+             src={product.image}
               alt={product.name}
               width={200}
               height={200}
