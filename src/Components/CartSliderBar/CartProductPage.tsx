@@ -90,6 +90,7 @@ export default function ProductPage() {
                 <div
                   key={i}
                   className="w-6 h-6 rounded-full border-2 border-gray-300 cursor-pointer mr-2"
+                  style={{ backgroundColor: color }} // Set the background color dynamically
                   >
                </div>
               ))}

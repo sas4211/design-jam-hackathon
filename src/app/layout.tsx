@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import { Home } from "lucide-react";
-
-
 
 const geistSans = localFont({
   src: "./fonts/Poppins-Medium.woff",
@@ -32,9 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       ><main>
-      
-        <Home />
-        
+              
         {children}
         </main>
       </body>

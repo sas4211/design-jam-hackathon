@@ -1,9 +1,8 @@
 "use client"
 import CartAsgardArtPage from '@/Components/CartSliderBar/CartAsgardArtPage'
-import CartBreadcrumb from '@/Components/CartSliderBar/CartBreadCrumb'
 import { CartProvider } from '@/Components/CartSliderBar/CartContext'
 import CartFooter from '@/Components/CartSliderBar/CartFooter'
-import CartHeaderSlider from '@/Components/CartSliderBar/CartHeaderSlider'
+import CartHeaderWithSlider from '@/Components/CartSliderBar/CartHeaderWithSlider'
 import CartProductDetails from '@/Components/CartSliderBar/CartProductDetails'
 
 import CartProductPage from '@/Components/CartSliderBar/CartProductPage'
@@ -13,8 +12,7 @@ import React from 'react'
 const page = () => {
   return (
     <CartProvider>
-      <CartHeaderSlider/>
-       <CartBreadcrumb/>
+      <CartHeaderWithSlider/>
         <CartAsgardArtPage/>
         <CartProductPage/>
         <CartProductDetails/>
